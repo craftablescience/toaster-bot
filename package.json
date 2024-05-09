@@ -1,0 +1,50 @@
+{
+	"name": "toaster-bot",
+	"version": "1.0.0",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"engineStrict": true,
+	"main": "build/main.js",
+	"scripts": {
+		"start": "node build/main.js",
+		"update-commands": "node build/main.js --update-commands",
+		"stop": "node build/main.js --stop",
+		"build": "tsc -p .",
+		"clean": "rm -rf build",
+		"lint": "eslint src --ext .ts --fix",
+		"dev": "tsc-watch --onSuccess \"node build/main.js\""
+	},
+	"author": "craftablescience",
+	"description": "Personal bot for friends",
+	"license": "MIT",
+	"homepage": "https://github.com/craftablescience/toaster-bot",
+	"bugs": {
+		"url": "https://github.com/craftablescience/toaster-bot/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/craftablescience/toaster-bot.git"
+	},
+	"dependencies": {
+		"canvas": "^2.11.2",
+		"console-stamp": "^3.1.2",
+		"discord-api-types": "^0.37.83",
+		"discord.js": "^14.15.2",
+		"gif-encoder": "^0.7.2",
+		"gifuct-js": "^2.1.2",
+		"moment": "^2.30.1",
+		"node-fetch": "^2.6.7",
+		"owoify-js": "^2.0.0"
+	},
+	"devDependencies": {
+		"@types/gif-encoder": "^0.7.4",
+		"@types/node": "^20.12.7",
+		"@types/node-fetch": "^2.5.7",
+		"@typescript-eslint/eslint-plugin": "^7.6.0",
+		"@typescript-eslint/parser": "^7.6.0",
+		"eslint": "^8.57.0",
+		"tsc-watch": "^6.2.0",
+		"typescript": "^5.4.5"
+	}
+}
