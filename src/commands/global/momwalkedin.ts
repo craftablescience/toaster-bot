@@ -9,6 +9,8 @@ import os from 'os';
 import { v4 as uuidv4 } from 'uuid';
 import { Command } from '../../types/interaction';
 
+import * as config from '../../config.json';
+
 const MomWalkedIn: Command = {
 	data: new SlashCommandBuilder()
 		.setName('momwalkedin')
@@ -41,7 +43,12 @@ const MomWalkedIn: Command = {
 		fs.writeFileSync(overlayPath, await overlayResponse.buffer());
 
 		try {
-			execSync(`blender -b "./assets/momwalkedin/render.blend" -P "./assets/momwalkedin/render.py" -- --cycles-device CPU --overlay-path "${overlayPath}" --output-path "${outputPath}"`);
+			const command = config.commands.momwalkedin.blender_base_command
+				.replace('{BLEND_FILE}', './assets/momwalkedin/render.blend')
+				.replace('{PYTHON_SCRIPT_FILE}', './assets/momwalkedin/render.py')
+				.replace('{OVERLAY_PATH}', `"${overlayPath}"`)
+				.replace('{OUTPUT_PATH}', `"${outputPath}"`);
+			execSync(command);
 		} catch (err) {
 			return interaction.editReply(`Encountered Blender error: ${err}`);
 		}

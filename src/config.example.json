@@ -1,4 +1,10 @@
 {
 	"token": "token goes here",
-	"client_id": "client id goes here"
+	"client_id": "client id goes here",
+
+	"commands": {
+		"momwalkedin": {
+			"blender_base_command": "blender -b {BLEND_FILE} -P {PYTHON_SCRIPT_FILE} -- --overlay-path {OVERLAY_PATH} --output-path {OUTPUT_PATH} --cycles-device CPU"
+		}
+	}
 }
