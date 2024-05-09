@@ -1,7 +1,9 @@
 # Toaster Bot
-Personal bot for friends.
+Personal Discord bot for friends.
 
 ### Installation Notes
+Some commands will assume Blender is installed and available system-wide.
+
 On Linux, the `node-canvas` dependency will likely need some libraries installed.
 
 On Debian-based distributions, this command should install all necessary dependencies:

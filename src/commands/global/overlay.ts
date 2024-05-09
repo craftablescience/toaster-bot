@@ -2,6 +2,7 @@
 
 import { createCanvas, loadImage } from 'canvas';
 import { AttachmentBuilder, ChatInputCommandInteraction, SlashCommandBuilder } from 'discord.js';
+import fetch from 'node-fetch';
 import { Command } from '../../types/interaction';
 
 const Overlay: Command = {

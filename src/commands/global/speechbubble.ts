@@ -4,6 +4,7 @@ import { CanvasRenderingContext2D, createCanvas, ImageData, loadImage } from 'ca
 import { AttachmentBuilder, ChatInputCommandInteraction, SlashCommandBuilder } from 'discord.js';
 import { decompressFrames, parseGIF } from 'gifuct-js';
 import GIFEncoder from 'gif-encoder';
+import fetch from 'node-fetch';
 import { getUploadLimitForChannel } from '../../utils/utils';
 import { Command } from '../../types/interaction';
 
