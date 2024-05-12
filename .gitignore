@@ -11,3 +11,6 @@ yarn.lock
 # Config
 config.json
 config_*.json
+
+# Assets
+*.blend1

@@ -4,10 +4,10 @@ import { ChatInputCommandInteraction, SlashCommandBuilder } from 'discord.js';
 import { performBlenderOverlay } from '../shared/blender_overlay';
 import { Command } from '../../types/interaction';
 
-const MomWalkedIn: Command = {
+const UsingMyPuter: Command = {
 	data: new SlashCommandBuilder()
-		.setName('momwalkedin')
-		.setDescription('mfw')
+		.setName('usingmyputer')
+		.setDescription('This looks like me when I was 10!')
 		.addAttachmentOption(option => option
 			.setName('overlay')
 			.setDescription('The image to overlay on top of the base image')
@@ -22,7 +22,7 @@ const MomWalkedIn: Command = {
 			.setDescription('Make the response invisible to everyone but you (default: false)')),
 
 	async execute(interaction: ChatInputCommandInteraction) {
-		return performBlenderOverlay(interaction, 'momwalkedin');
+		return performBlenderOverlay(interaction, 'usingmyputer');
 	}
 };
-export default MomWalkedIn;
+export default UsingMyPuter;
